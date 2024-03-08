@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Network Connectivity and Load g_serial Module if not Connected
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c '/home/open_serial.sh'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
